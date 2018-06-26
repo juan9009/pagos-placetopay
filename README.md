@@ -1,2 +1,2 @@
 # pagos-placetopay
-Prueba con web services para PlacetoPay
+Prueba con web service para PlacetoPay
