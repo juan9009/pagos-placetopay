@@ -1,0 +1,13 @@
+.content-wrapper {
+    margin-top: 2em;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
