@@ -1,10 +1,47 @@
-(function($) {
+(function ($) {
     /**
      * Chilean Spanish language package
      * Translated by @marceloampuerop6
      */
+    const isNit = function () {
+        return {
+            validate: function (input) {
+                return {
+                    valid: /^([0-9]{1-15}-[0-9])$/.test('abc1'),
+                };
+            },
+        };
+    };
+
+    // Register the validator
+    // FormValidation.validators.nit = isNit
+
+    // Use new validator
+    /*FormValidation.formValidation(
+        document.getElementById('demoForm'),
+        {
+            fields: {
+                pwd: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required and cannot be empty'
+                        },
+                        // checkPassword is name of new validator
+                        checkPassword: {
+                            message: 'The password is too weak'
+                        },
+                    }
+                }
+            },
+        }
+    );*/
+
+
     FormValidation.I18n = $.extend(true, FormValidation.I18n, {
         'es_CL': {
+            nit: {
+                'default': 'Ingrese un NIT válido'
+            },
             base64: {
                 'default': 'Por favor ingrese un valor válido en base 64'
             },

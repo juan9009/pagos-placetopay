@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -15,7 +15,14 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
+        'ddTipoIdentificacion',
+        'txtNumeroIdentificacion',
+        'txtNombre',
+        'txtNumeroCelular',
+        'txtDireccion',
     ];
 
     /**
@@ -26,4 +33,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function infoSession()
+    {
+        return self::where('email', session('email'))->first();
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function tipoidentificacion()
+    {
+        return $this->belongsTo(\App\TipoIdentificacion::class, 'ddTipoIdentificacion');
+    }
 }

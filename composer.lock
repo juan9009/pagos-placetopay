@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c9dbc25feb7fe12d02c3f19cfc3a2a4",
+    "content-hash": "b4a9d1e0c549c2e6ca2ccf3552a72b1c",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -452,6 +452,60 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "laracasts/flash",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/flash.git",
+                "reference": "10cd420ab63fd0796bf5e1e5b99f87636d2f4333"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/flash/zipball/10cd420ab63fd0796bf5e1e5b99f87636d2f4333",
+                "reference": "10cd420ab63fd0796bf5e1e5b99f87636d2f4333",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "^6.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laracasts\\Flash\\FlashServiceProvider"
+                    ],
+                    "aliases": {
+                        "Flash": "Laracasts\\Flash\\Flash"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Laracasts\\Flash": "src/"
+                },
+                "files": [
+                    "src/Laracasts/Flash/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Easy flash notifications",
+            "time": "2017-06-22T19:01:19+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1333,49 +1387,6 @@
                 "uuid"
             ],
             "time": "2018-01-20T00:28:24+00:00"
-        },
-        {
-            "name": "ritey/nusoap",
-            "version": "0.9.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ritey/nusoap.git",
-                "reference": "0ab518be271312e4eac4a08b27b3a7ddf9aedea2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ritey/nusoap/zipball/0ab518be271312e4eac4a08b27b3a7ddf9aedea2",
-                "reference": "0ab518be271312e4eac4a08b27b3a7ddf9aedea2",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "lib/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPLv2"
-            ],
-            "authors": [
-                {
-                    "name": "Dietrich Ayala",
-                    "homepage": "http://sourceforge.net/u/dietricha/profile/"
-                },
-                {
-                    "name": "Scott Nichol",
-                    "homepage": "http://sourceforge.net/u/snichol/profile/"
-                }
-            ],
-            "description": "Clone of NuSoap to work with Packagist/Composer",
-            "homepage": "http://github.com/ritey/nusoap",
-            "keywords": [
-                "nusoap",
-                "php",
-                "soap"
-            ],
-            "time": "2016-06-07T10:48:50+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
