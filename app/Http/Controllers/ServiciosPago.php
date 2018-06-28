@@ -230,7 +230,7 @@ class ServiciosPago extends Controller
             [
                 'auth' => $this->AuthWebService->paramAuth,
                 'transaction' => [
-                    'bankCode' => session('banco'),
+                    'bankCode' => $request->banco,
                     'bankInterface' => $request->cuenta,
                     'returnURL' => $request->getSchemeAndHttpHost() . '/pago/informacionpago',
                     'reference' => date('dmYHis'),
